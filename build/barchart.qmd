@@ -1,0 +1,16 @@
+---
+title: ""
+format:
+  html:
+    code-fold: true
+    code-summary: "View Code"
+notebook-links: false
+---
+
+## Visualization
+
+{{< embed VisualizationCode.ipynb#2-Revenue Bar Chart echo=true >}}
+
+## Description
+
+{{< embed VisualizationCode.ipynb#2-Context for Revenue Bar Chart echo=true >}}

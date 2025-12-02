@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzing Video Game Market Trends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <main>
+        <h1>Analyzing Video Game Market Trends</h1>
+        <h3> Caleb (visualization 1 and 2), Joshua (visualization 3 and 4), Dimitry (Visualization 5) </h3>
+
+        <h2>Introduction</h2>
+        <p>
+            The topic that we chose for our project is the analysis of video games sales and ratings over roughly the
+            past two decades. Specifically, we would like to analyze variables such as production year, video game
+            critic score, video game user score, maturity ratings, platform type, and sales across various regions. We
+            find this topic relevant because over the past years, video games have become really popular, and not just
+            amongst teenagers, but also across younger and older age groups. Furthermore, because gaming became popular
+            in the early 2000s, the current data doesn’t only include trends of those who play games currently, but also
+            includes those who played video games back when they were younger, and still play them now, which can be an
+            interesting point of insight to compare current video game consumer culture vs older video game consumer
+            culture. Most importantly, we believe it would be of interest to analyze console usage across the world with
+            video game genre, video game genre with sales, video game genre with maturity rating, sales with critic vs.
+            user score, etc. Many insights and trends can be derived from the comparison of the dataset parameters, and
+            comparing the strength of certain relations over others, for example, whether user rating or critic rating
+            lead to a greater increase in sales, we believe would prove interesting.
+        </p>
+        <br>
+        The following are two studies related to our topic:
+        <p>
+            T. Kraemer, W. H. Weiger, and S. Heidenreich, “Do all stars shine the same? Investigating the nonlinear
+            effects of user and critic reviews on video game sales,” Journal of Business Research, vol. 188, p. 115034,
+            Nov. 2024, doi: <a href="https://doi.org/10.1016/j.jbusres.2024.115034">
+                https://doi.org/10.1016/j.jbusres.2024.115034</a>.
+        </p>
+        <p>
+            In this Science Direct article, the authors examine how video game sales are influenced by both professional
+            and user reviews. They analyzed the sales and review data of 1,642 video games using models that account for
+            nonlinear effects of review valence on sales. The results show a positive relationship between sales and
+            reviews, but with nonlinear patterns. For user reviews, the positive effect weakens at higher levels,
+            meaning there is little difference in sales impact between good and very good user ratings. In contrast, the
+            positive effect of critic reviews grows stronger at higher levels, highlighting that critic reviews are more
+            influential and continue to play a strong signaling role in this industry. These findings are valuable for
+            video game producers and marketers. For example, boosting critic scores through additional avenues like
+            early access or press previews may yield additional gains for already well-reviewed games. Emphasizing
+            engagement with critics and securing high-profile reviews remains essential, while for lesser-known or
+            mid-tier titles, improving average user reviews can lead to meaningful increases in sales.
+        </p>
+        <p>
+            H. Cheng, “Video Game Sales Trends and Stats,” BCP Business & Management, vol. 25, pp. 222–225, Aug. 2022,
+            doi: <a href="https://doi.org/10.54691/bcpbm.v25i.1760"> https://doi.org/10.54691/bcpbm.v25i.1760</a>.
+        </p>
+        <p>
+            In this Boya Century Publishing article, the author provides an overview of the general trends in the gaming
+            industry over the past few years. The provide interesting insights in how conditions in regions can lead to
+            more video game sales, such as in 2007, when Namibia had lower internet access than the rest of the world,
+            which lead to the most video game sales being there during that year; whereas, in other regions, people
+            preferred to use their phones for video games, which led to less sales. Furthermore, the author points out
+            general trends in preferred genres, where action games are the most popular nowadays.
+        </p>
+        <br>
+        The following are two static images related to our topic:
+
+        <figure>
+            <img src="images/image1.png" alt="description">
+            <figcaption>[Figure 1: 2010 Video Game Maturity Ratings (<a
+                    href="https://www.gamespot.com/articles/5-of-games-in-2010-rated-m-esrb/1100-6304153/"> link </a>)]
+            </figcaption>
+        </figure>
+        <figure>
+            <img src="images/image2.png" alt="description">
+            <figcaption>[Figure 2: 2024 Video Game Maturity Ratings (<a
+                    href="https://www.esrb.org/blog/e-for-everyone-was-assigned-most-often-in-2024/"> link </a>)]
+            </figcaption>
+        </figure>
+
+        Based on the images, the proportion of mature and teen games has increased over the past fifteen years.
+
+        <figure>
+            <img src="images/image3.png" alt="description">
+            <figcaption>[Figure 3: Video Game Critic vs. User Score (<a
+                    href="https://medium.com/@elijah_89308/score-a-statistical-journey-into-the-heart-of-video-game-sales-3b3a3fa91f57">
+                    link </a>)]</figcaption>
+        </figure>
+
+        Based on the images, there is a correlation between critic score and user score, although not strong.
+
+
+        <h2> About Our Dataset </h2>
+        <p>
+            The data which we decided to use for the project is from the following Kaggle dataset: <a
+                href="https://www.kaggle.com/datasets/thedevastator/video-game-sales-and-ratings"> link </a>. The
+            dataset includes roughly 15,000 entries (roughly becomes some games repeat, and some row entries are
+            not full). The data is scraped off of an online game rating, review, and tracker website: VGChartz.
+            The dataset includes 17 columns comprising both categorial variables (such as publisher name, ESRB
+            rating, etc.) and continuous variables (such as sales, critic rating, year of release, etc.).
+            However, the dataset has some flaws as well, mainly that it only goes up until the 2018th year.
+            Therefore, our group may merge similar datasets for more recent years, or scrape VGChartz ourselves;
+            to keep the dataset reasonably sized, we can cut off earlier years before the 21st century.
+            Furthermore, it would also be interesting to analyze video game perception before its release. While
+            it would be hard to analyze marketing strategies, advertisements, conference gatherings, and
+            trailers, it might be possible to gather activity metrics from popular video game blog websites such
+            as Reddit.
+        </p>
+        <p>
+            In terms of preprocessing, the data already has a really good user rating. All we had to do was just to
+            coerce values to either floats for numerical or strings for categorical data, and mark them as NaN if not
+            possible. Lastly, we removed each row in which there was at least one NaN value.
+        </p>
+
+        <h2> Dataset </h2>
+
+        <iframe src="data.html"></iframe>
+
+        <h2> Our Analysis </h2>
+
+        <iframe src="scatterplot.html"></iframe>
+        <p>
+            This visualization displays the relationship between Critic Score and User Score for each video game in the
+            dataset using a scatterplot. Each point mark represents a single game. The position channels (x = critic
+            score, y = user score) encode two quantitative attributes (on a 0-100 scale) to help users identify
+            correlations, clusters, and outliers across the industry. The color channel encodes the game’s ESRB
+            (Entertainment Software Rating Board) content rating (a categorical attribute), while the size channel
+            represents global sales in millions to emphasize games with larger sale impact.
+        </p>
+        <p>
+            To support exploration, the visualization provides multiple interactive filters, including genre, rating,
+            developer, platform, and minimum global sales. This allows users to search for specific subsets of the data
+            or to compare groups. This makes the tool useful for high-level analysis tasks such as discovering which
+            types of games tend to receive high ratings from both critics and players, identifying market trends, or
+            examining how content rating relates to commercial performance.
+
+            Notably, games rated E (Everyone) show the highest sales overall, likely due to their broader accessibility.
+        </p>
+
+        <iframe src="barchart.html"></iframe>
+        <p>
+            This visualization summarizes the total video game sales across five regions: Japan, Europe, North America,
+            Other regions, and Global totals. Each bar mark represents a region, using length/height to show total sales
+            volume. Color is used as a categorical channel to distinguish the regions from one another.
+        </p>
+        <p>
+            To support exploration, the visualization includes interactive filters for genre, ESRB (Entertainment
+            Software Rating Board) rating, developer, and platform, allowing users to refine the view and compare how
+            regional sales distributions change across different subsets of games. This makes the chart useful for
+            identifying market patterns and understanding how particular categories of games perform in different
+            geographic areas.
+
+            Overall and among individual regions, North America generates the highest revenue, followed by Europe, while
+            Japan consistently shows the lowest total sales within this dataset.
+        </p>
+
+        <iframe src="linechart.html"></iframe>
+        <p>
+            This visualization in a line chart for the year and the total global sales in millions of dollars for that
+            year. Each line on the line chard represents a genre of a video game.
+        </p>
+        <p>
+            From the line chart we can see that over the years, all genres have fallen in popularity while shooter,
+            sports, and action games have risen on-net. The only exception is the sudden plunder in 2016, but this can
+            be explained by the fact that the data was scraped from a blog, so perhaps the blog website became less
+            popular and outdated.
+        </p>
+
+        <iframe src="bubblechart.html"></iframe>
+        <p>
+            The above visualization is a bubble chart between video game genre and platform, where the bubble size
+            corresponds to global sales in millions of dollars.
+        </p>
+        <p>
+            What we can see from the visualization is that different platforms have seen different levels of success
+            across genres, suggesting that perhaps those specific platofrms are godo for the specific genre of game
+            (e.g. Wii for sports games), or the games the platform made were good for the genre. Perhaps a combination
+            of both.
+        </p>
+
+        <iframe src="producer_genres_mosaic.html"></iframe>
+        <p>
+            The above visualization is a mosaic plot between major video game companies and genres. Hovering over a
+            mosaic states its percent share for the company of their genres, as well as the most used platform for that
+            genre for the company that made the game.
+        </p>
+        <p>
+            From this visualization we can gather that certain companies prefer certain genres. For example, EA prefers
+            sports games, while Nintendo prefers platform and role-playing games. This could mean that certain audiences
+            where certain platforms have market share are exposed more to one type of game to another, which could
+            impact video game culture in a region.
+        </p>
+
+
+        <h2> Conclusion </h2>
+        We noticed a few key findings:
+        <ol>
+            <li> Despite popular online drama about video-game critics poorly representing popular games, the dataset
+                showed otherwise. There was a positive correlation between user rating and critic rating for video
+                games, and this rating had an especially strong correlation for those games that had large sales.</li>
+            <li> While Japan is a big producer of Video-Games, their market produces far less income than across Europe,
+                North America, and other countries. The only game genres in which Japanese consumer sales exceed those
+                of the others is for fighting games, platformers, and especially role-playing games.</li>
+            <li> Many video-game companies produce only specific games, and many platforms promote specific companies.
+                For example, XBox promotes EA games, which are mainly sports games Therefore, gaming culture looks
+                different in Northern America where XBox may have a larger share of the market in contrast to Japan,
+                where Nintendo and associated role-playing games have a larger share.</li>
+        </ol>
+        If our analysis were to be improved, here is what we think are the main points:
+        <ol>
+            <li> It would have been good to also consider marketing and general feedback from consumers, beacuse that
+                would also have a lot to say about video game culture in certain regions and how video games are sold
+                there. For this level of analysis, the dataset would have to have been expanded by scraping perhaps
+                online gaming forums like Reddit and Steam.</li>
+            <li> More in-depth research on the topic would help destinguish between causation and correlation
+                relationships. For example, although there is a positive correlation between user rating and critic
+                score, it is unclear whether perhaps critic score follows user rating, if user rating is influenced by
+                critic score, or if there is another factor.</li>
+        </ol>
+    </main>
+</body>
+
+</html>
