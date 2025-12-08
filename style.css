@@ -7,9 +7,21 @@ body {
     ;
 }
 
+.site-header {
+    background:#00ddff; 
+    padding:10px 20px; 
+    justify-content: center; 
+    display: flex; align-items: 
+    center;gap:30px; 
+    font-weight:800; 
+    font-size: large;}
+.site-header a {color:#ffffff; padding:6px 10px; border-radius:4px; text-decoration:none;}
+.site-header a:visited {color:#003e7c;} 
+.site-header a:hover {background:#222;}
+
 main {
     padding: 4rem 2rem;
-    max-width: 1700px;
+    max-width: 800px;
     margin: 0 auto;
     background-color: #ffffff;
     min-height: 400px;
@@ -48,9 +60,10 @@ iframe {
     border-radius: 4px;
 }
 
-iframelarge {
-    width: 100%;
+.iframelarge {
     height: 900px;
-    border: 1px solid #ccc;
-    border-radius: 4px;
+    width: 120%;
+    position: relative;
+    left: -10%;
 }
+

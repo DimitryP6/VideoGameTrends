@@ -9,6 +9,16 @@
 </head>
 
 <body>
+    <header class="site-header">
+     <nav class="site-header">
+        <a href="homepage.html">Home</a>
+        <a href="critic_user_score_vis.html">Critic vs User Score</a>
+        <a href="genre_sales_vis.html">Genre vs Sales</a>
+        <a href="genre_publisher_vis.html">Genre vs Publisher</a>
+        <a href="conclusionpage.html">Conclusion</a>
+     </nav>
+    </header>
+
     <main>
         <h1>Analyzing Video Game Market Trends</h1>
         <h3> Caleb (visualization 1 and 2), Joshua (visualization 3 and 4), Dimitry (Visualization 5) </h3>
@@ -115,109 +125,6 @@
         <h2> Dataset </h2>
 
         <iframe src="data.html"></iframe>
-
-        <h2> Our Analysis </h2>
-
-        <iframe class="iframelarge" src="scatterplot_with_barchart.html"></iframe>
-        <p>
-            This visualization displays the relationship between Critic Score and User Score for each video game in the
-            dataset using a scatterplot. Each point mark represents a single game. The position channels (x = critic
-            score, y = user score) encode two quantitative attributes (on a 0-100 scale) to help users identify
-            correlations, clusters, and outliers across the industry. The color channel encodes the game’s ESRB
-            (Entertainment Software Rating Board) content rating (a categorical attribute), while the size channel
-            represents global sales in millions to emphasize games with larger sale impact.
-        </p>
-        <p>
-            To support exploration, the visualization provides multiple interactive filters, including genre, rating,
-            developer, platform, and minimum global sales. This allows users to search for specific subsets of the data
-            or to compare groups. This makes the tool useful for high-level analysis tasks such as discovering which
-            types of games tend to receive high ratings from both critics and players, identifying market trends, or
-            examining how content rating relates to commercial performance.
-
-            Notably, games rated E (Everyone) show the highest sales overall, likely due to their broader accessibility.
-        </p>
-
-        <iframe src="boxplot_with_summary.html"></iframe>
-        <p>
-            This visualization summarizes the total video game sales across five regions: Japan, Europe, North America,
-            Other regions, and Global totals. Each bar mark represents a region, using length/height to show total sales
-            volume. Color is used as a categorical channel to distinguish the regions from one another.
-        </p>
-        <p>
-            To support exploration, the visualization includes interactive filters for genre, ESRB (Entertainment
-            Software Rating Board) rating, developer, and platform, allowing users to refine the view and compare how
-            regional sales distributions change across different subsets of games. This makes the chart useful for
-            identifying market patterns and understanding how particular categories of games perform in different
-            geographic areas.
-
-            Overall and among individual regions, North America generates the highest revenue, followed by Europe, while
-            Japan consistently shows the lowest total sales within this dataset.
-        </p>
-
-        <iframe src="linechart.html"></iframe>
-        <p>
-            This visualization in a line chart for the year and the total global sales in millions of dollars for that
-            year. Each line on the line chard represents a genre of a video game.
-        </p>
-        <p>
-            From the line chart we can see that over the years, all genres have fallen in popularity while shooter,
-            sports, and action games have risen on-net. The only exception is the sudden plunder in 2016, but this can
-            be explained by the fact that the data was scraped from a blog, so perhaps the blog website became less
-            popular and outdated.
-        </p>
-
-        <iframe src="bubblechart.html"></iframe>
-        <p>
-            The above visualization is a bubble chart between video game genre and platform, where the bubble size
-            corresponds to global sales in millions of dollars.
-        </p>
-        <p>
-            What we can see from the visualization is that different platforms have seen different levels of success
-            across genres, suggesting that perhaps those specific platofrms are godo for the specific genre of game
-            (e.g. Wii for sports games), or the games the platform made were good for the genre. Perhaps a combination
-            of both.
-        </p>
-
-        <iframe src="producer_genres_mosaic.html"></iframe>
-        <p>
-            The above visualization is a mosaic plot between major video game companies and genres. Hovering over a
-            mosaic states its percent share for the company of their genres, as well as the most used platform for that
-            genre for the company that made the game.
-        </p>
-        <p>
-            From this visualization we can gather that certain companies prefer certain genres. For example, EA prefers
-            sports games, while Nintendo prefers platform and role-playing games. This could mean that certain audiences
-            where certain platforms have market share are exposed more to one type of game to another, which could
-            impact video game culture in a region.
-        </p>
-
-
-        <h2> Conclusion </h2>
-        We noticed a few key findings:
-        <ol>
-            <li> Despite popular online drama about video-game critics poorly representing popular games, the dataset
-                showed otherwise. There was a positive correlation between user rating and critic rating for video
-                games, and this rating had an especially strong correlation for those games that had large sales.</li>
-            <li> While Japan is a big producer of Video-Games, their market produces far less income than across Europe,
-                North America, and other countries. The only game genres in which Japanese consumer sales exceed those
-                of the others is for fighting games, platformers, and especially role-playing games.</li>
-            <li> Many video-game companies produce only specific games, and many platforms promote specific companies.
-                For example, XBox promotes EA games, which are mainly sports games Therefore, gaming culture looks
-                different in Northern America where XBox may have a larger share of the market in contrast to Japan,
-                where Nintendo and associated role-playing games have a larger share.</li>
-        </ol>
-        If our analysis were to be improved, here is what we think are the main points:
-        <ol>
-            <li> It would have been good to also consider marketing and general feedback from consumers, beacuse that
-                would also have a lot to say about video game culture in certain regions and how video games are sold
-                there. For this level of analysis, the dataset would have to have been expanded by scraping perhaps
-                online gaming forums like Reddit and Steam.</li>
-            <li> More in-depth research on the topic would help destinguish between causation and correlation
-                relationships. For example, although there is a positive correlation between user rating and critic
-                score, it is unclear whether perhaps critic score follows user rating, if user rating is influenced by
-                critic score, or if there is another factor.</li>
-        </ol>
+    </body>
     </main>
-</body>
-
 </html>

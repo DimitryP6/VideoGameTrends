@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Analyzing Video Game Market Trends</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <header class="site-header">
+     <nav class="site-header">
+        <a href="homepage.html">Home</a>
+        <a href="critic_user_score_vis.html">Critic vs User Score</a>
+        <a href="genre_sales_vis.html">Genre vs Sales</a>
+        <a href="genre_publisher_vis.html">Genre vs Publisher</a>
+        <a href="conclusionpage.html">Conclusion</a>
+     </nav>
+    </header>
+
+    <main>
+    <h1> Our Analysis </h1>
+
+        <iframe class="iframelarge" src="scatterplot_with_barchart.html"></iframe>
+        <p>
+            This visualization displays the relationship between Critic Score and User Score for video games using a 
+            scatterplot and bar plot. On the scatter plot each point mark represents a single game. The x axis= critic
+            score, y = user score) encode two quantitative attributes (on a 0-100 scale) to help users identify
+            correlations, clusters, and outliers across the industry. The color channel encodes the game’s ESRB
+            (Entertainment Software Rating Board) content rating (a categorical attribute), while the size channel
+            represents global sales in millions to emphasize games with larger sale impact.
+        </p>
+        <p>
+            To support exploration, the visualization provides multiple interactive filters, including genre, rating,
+            developer, platform, and minimum global sales. This allows users to search for specific subsets of the data
+            or to compare groups. This makes the tool useful for high-level analysis tasks such as discovering which
+            types of games tend to receive high ratings from both critics and players, identifying market trends, or
+            examining how content rating relates to commercial performance.
+
+            Notably, games rated E (Everyone) show the highest sales overall, likely due to their broader accessibility.
+        </p>
+
+        <iframe src="boxplot_with_summary.html"></iframe>
+        <p>
+            This visualization summarizes the total video game sales across five regions: Japan, Europe, North America,
+            Other regions, and Global totals. Each bar mark represents a region, using length/height to show total sales
+            volume. Color is used as a categorical channel to distinguish the regions from one another.
+        </p>
+        <p>
+            To support exploration, the visualization includes interactive filters for genre, ESRB (Entertainment
+            Software Rating Board) rating, developer, and platform, allowing users to refine the view and compare how
+            regional sales distributions change across different subsets of games. This makes the chart useful for
+            identifying market patterns and understanding how particular categories of games perform in different
+            geographic areas.
+
+            Overall and among individual regions, North America generates the highest revenue, followed by Europe, while
+            Japan consistently shows the lowest total sales within this dataset.
+        </p>
+    </main>
+</body>
+</html>
