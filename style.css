@@ -15,9 +15,9 @@ body {
     center;gap:30px; 
     font-weight:800; 
     font-size: large;}
-.site-header a {color:#ffffff; padding:6px 10px; border-radius:4px; text-decoration:none;}
+.site-header a {color:#000000; padding:6px 10px; border-radius:4px; text-decoration:none;}
 .site-header a:visited {color:#003e7c;} 
-.site-header a:hover {background:#222;}
+.site-header a:hover {background:#ffffff;}
 
 main {
     padding: 4rem 2rem;
