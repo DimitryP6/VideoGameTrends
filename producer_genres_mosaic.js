@@ -1,5 +1,20 @@
 d3.json('vgs_cleaned.json').then(function (data) {
 
+  let genreColorScheme = {
+    'Sports': '#8dd3c7',
+    'Racing': '#ffffb3',
+    'Platform': '#bebada',
+    'Misc': '#fb8072',
+    'Action': '#80b1d3',
+    'Puzzle': '#fdb462',
+    'Shooter': '#b3de69',
+    'Fighting': '#fccde5',
+    'Simulation': '#d9d9d9',
+    'Role-Playing': '#bc80bd',
+    'Adventure': '#ccebc5',
+    'Strategy': '#ffed6f'
+  }
+
   let
     width = 700,
     height = 500
@@ -32,7 +47,7 @@ d3.json('vgs_cleaned.json').then(function (data) {
 
   let colorScale = d3.scaleOrdinal()
     .domain(genres)
-    .range(d3.schemeTableau10)
+    .range(genres.map(g => genreColorScheme[g] || '#999999'))
 
   let xPos = 0
   let publisherX = new Map()
@@ -78,10 +93,10 @@ d3.json('vgs_cleaned.json').then(function (data) {
     .data(cellData)
     .enter()
     .append('rect')
-    .attr('x', d => d.x)
-    .attr('y', d => d.y)
-    .attr('width', d => Math.max(0, d.width))
-    .attr('height', d => Math.max(0, d.height))
+    .attr('x', d => d.x + 0.5)
+    .attr('y', d => d.y + 0.5)
+    .attr('width', d => Math.max(0, d.width - 1))
+    .attr('height', d => Math.max(0, d.height - 1))
     .attr('fill', d => colorScale(d.genre))
     .attr('stroke', '#fff')
     .attr('stroke-width', 1)
@@ -101,6 +116,7 @@ d3.json('vgs_cleaned.json').then(function (data) {
 
   cells.on('mouseover', function (event, d) {
     d3.select(this)
+      .raise()
       .transition()
       .attr('stroke', '#000000ff')
       .attr('stroke-width', 2)
