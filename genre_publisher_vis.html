@@ -11,30 +11,61 @@
 <body>
 
     <header class="site-header">
-     <nav class="site-header">
-        <a href="index.html">Home</a>
-        <a href="critic_user_score_vis.html">Critic vs User Score</a>
-        <a href="genre_sales_vis.html">Genre vs Sales</a>
-        <a href="genre_publisher_vis.html">Genre vs Publisher</a>
-        <a href="conclusionpage.html">Conclusion</a>
-     </nav>
+        <nav class="site-header">
+            <a href="index.html">Home</a>
+            <a href="critic_user_score_vis.html">Critic vs User Score</a>
+            <a href="genre_sales_vis.html">Genre vs Sales</a>
+            <a href="genre_publisher_vis.html">Genre vs Publisher</a>
+            <a href="conclusionpage.html">Conclusion</a>
+        </nav>
     </header>
 
     <main>
-    <h1> Our Analysis </h1>
+        <h1> Our Analysis </h1>
 
-        <iframe src="producer_genres_mosaic.html"></iframe>
+        <iframe scrolling="no" src="producer_genres_mosaic.html"></iframe>
+        <h4>Critic Score vs User Score Visualization for Two Genre Comparison</h4>
         <p>
-            The above visualization is a mosaic plot between major video game companies and genres. Hovering over a
-            mosaic states its percent share for the company of their genres, as well as the most used platform for that
-            genre for the company that made the game.
+            The above visualization is a mosaic plot between major video game companies and the amount of games they
+            produced under that genre from the dataset. The genres are labeled by color in the legend, and the video
+            game companies are labeled on the horizontal axis above the visualization.
         </p>
         <p>
-            From this visualization we can gather that certain companies prefer certain genres. For example, EA prefers
-            sports games, while Nintendo prefers platform and role-playing games. This could mean that certain audiences
-            where certain platforms have market share are exposed more to one type of game to another, which could
-            impact video game culture in a region.
+            The user can interact with the graph by hovering over a tile, which displays, aside from company and game
+            genre, the percent of that game genre of the total games made for that company, and the top platform for
+            that specific game company and the game genre.
+        </p>
+        </p>
+        <h4>Key Takeaways</h4>
+        <p>
+        <ol>
+            <li>
+                Nintendo, which as we saw from our previous plots has a large share in Japan, produces games primarily
+                under the action, platform, and role-playing genres.
+            </li>
+            <li>
+                Electronic arts, which as we saw from our previous plots has a large share in the Western market,
+                produces game primarily under action, racing, shooter, and especially sports.
+            </li>
+            <li>
+                By looking at the plot, we can tell that the most popular genres action, role-playing, shooter, and
+                sports.
+            </li>
+            <li>
+                Because some companies produce games under certain genres, that means that certain consoles come
+                pre-packaged with games that fall under those genres more. In other words, the game a company develops
+                depends on the console they want to market it to.
+            </li>
+            <li>
+                Furthermore, because certain companies are in certain regions, that means that games come also
+                pre-packaged with the companies that deploys them. In other words, video-game culture depends largely on
+                the type of companies in that region. So, when creating a game, it is important to account for the
+                region and the companies that exist there.
+
+            </li>
+        </ol>
         </p>
     </main>
 </body>
+
 </html>

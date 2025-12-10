@@ -10,18 +10,18 @@
 
 <body>
     <header class="site-header">
-     <nav class="site-header">
-        <a href="homepage.html">Home</a>
-        <a href="critic_user_score_vis.html">Critic vs User Score</a>
-        <a href="genre_sales_vis.html">Genre vs Sales</a>
-        <a href="genre_publisher_vis.html">Genre vs Publisher</a>
-        <a href="conclusionpage.html">Conclusion</a>
-     </nav>
+        <nav class="site-header">
+            <a href="homepage.html">Home</a>
+            <a href="critic_user_score_vis.html">Critic vs User Score</a>
+            <a href="genre_sales_vis.html">Genre vs Sales</a>
+            <a href="genre_publisher_vis.html">Genre vs Publisher</a>
+            <a href="conclusionpage.html">Conclusion</a>
+        </nav>
     </header>
 
     <main>
         <h1>Analyzing Video Game Market Trends</h1>
-        <h3> Caleb (visualization 1 and 2), Joshua (visualization 3 and 4), Dimitry (Visualization 5) </h3>
+        <h3> By Caleb, Joshua, and Dimitry </h3>
 
         <h2>Introduction</h2>
         <p>
@@ -121,10 +121,102 @@
             coerce values to either floats for numerical or strings for categorical data, and mark them as NaN if not
             possible. Lastly, we removed each row in which there was at least one NaN value.
         </p>
+        <p>
+            The table has 6939 rows by 16 columns after processing, and its structure is as follows:
+        </p>
 
-        <h2> Dataset </h2>
+        <table class="data-dictionary">
+            <thead>
+                <tr>
+                    <th style="transform: translateX(-50px)">Name</th>
+                    <th style="transform: translateX(-25px)">String </th>
+                    <th style="transform: translateX(-180px)">Description</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>Name</td>
+                    <td>String</td>
+                    <td>Title of the video game</td>
+                </tr>
+                <tr>
+                    <td>Platform</td>
+                    <td>Categorical</td>
+                    <td>Gaming platform (e.g., Wii, DS, GBA)</td>
+                </tr>
+                <tr>
+                    <td>Year_of_Release</td>
+                    <td>Numeric</td>
+                    <td>Year the game was released</td>
+                </tr>
+                <tr>
+                    <td>Genre</td>
+                    <td>Categorical</td>
+                    <td>Game genre (e.g., Sports, Racing, Action)</td>
+                </tr>
+                <tr>
+                    <td>Publisher</td>
+                    <td>Categorical</td>
+                    <td>Company that published the game</td>
+                </tr>
+                <tr>
+                    <td>NA_Sales</td>
+                    <td>Numeric</td>
+                    <td>Sales in North America (millions)</td>
+                </tr>
+                <tr>
+                    <td>EU_Sales</td>
+                    <td>Numeric</td>
+                    <td>Sales in Europe (millions)</td>
+                </tr>
+                <tr>
+                    <td>JP_Sales</td>
+                    <td>Numeric</td>
+                    <td>Sales in Japan (millions)</td>
+                </tr>
+                <tr>
+                    <td>Other_Sales</td>
+                    <td>Numeric</td>
+                    <td>Sales in other regions (millions)</td>
+                </tr>
+                <tr>
+                    <td>Global_Sales</td>
+                    <td>Numeric</td>
+                    <td>Total worldwide sales (millions)</td>
+                </tr>
+                <tr>
+                    <td>Critic_Score</td>
+                    <td>Numeric</td>
+                    <td>The average score from critics</td>
+                </tr>
+                <tr>
+                    <td>Critic_Count</td>
+                    <td>Numeric</td>
+                    <td>The amount of critics who rated the game</td>
+                </tr>
+                <tr>
+                    <td>User_Score</td>
+                    <td>Numeric</td>
+                    <td>The average score from users</td>
+                </tr>
+                <tr>
+                    <td>User_Count</td>
+                    <td>Numeric</td>
+                    <td>The amount of users who rated the game</td>
+                </tr>
+                <tr>
+                    <td>Developer</td>
+                    <td>Categorical</td>
+                    <td>The developer of the game (includes sub-companies)</td>
+                </tr>
+                <tr>
+                    <td>Rating</td>
+                    <td>Categorical</td>
+                    <td>The maturity rating of the game</td>
+                </tr>
+            </tbody>
+        </table>
+</body>
+</main>
 
-        <iframe src="data.html"></iframe>
-    </body>
-    </main>
 </html>
