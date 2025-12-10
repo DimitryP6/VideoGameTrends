@@ -1,5 +1,6 @@
 d3.json('vgs_cleaned.json').then(function (data) {
 
+  // Same color scheme as the one in the notebook.
   let genreColorScheme = {
     'Sports': '#8dd3c7',
     'Racing': '#ffffb3',
@@ -15,6 +16,7 @@ d3.json('vgs_cleaned.json').then(function (data) {
     'Strategy': '#ffed6f'
   }
 
+  // Set up constants.
   let
     width = 700,
     height = 500
@@ -26,6 +28,7 @@ d3.json('vgs_cleaned.json').then(function (data) {
     right: 140
   }
 
+  // Set up svg, widths, and color scale.
   let svg = d3.select('body')
     .append('svg')
     .attr('width', width)
@@ -47,7 +50,7 @@ d3.json('vgs_cleaned.json').then(function (data) {
 
   let colorScale = d3.scaleOrdinal()
     .domain(genres)
-    .range(genres.map(g => genreColorScheme[g] || '#999999'))
+    .range(genres.map(g => genreColorScheme[g]))
 
   let xPos = 0
   let publisherX = new Map()
@@ -62,6 +65,7 @@ d3.json('vgs_cleaned.json').then(function (data) {
 
   let cellData = []
 
+  // Modify the cell data.
   publishers.forEach(pub => {
     let yPos = 0
     let pubTotal = publisherTotals.get(pub)

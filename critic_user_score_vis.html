@@ -11,26 +11,26 @@
 <body>
 
     <header class="site-header">
-     <nav class="site-header">
-        <a href="index.html">Home</a>
-        <a href="critic_user_score_vis.html">Critic vs User Score</a>
-        <a href="genre_sales_vis.html">Genre vs Sales</a>
-        <a href="genre_publisher_vis.html">Genre vs Publisher</a>
-        <a href="conclusionpage.html">Conclusion</a>
-     </nav>
+        <nav class="site-header">
+            <a href="index.html">Home</a>
+            <a href="critic_user_score_vis.html">Critic vs User Score</a>
+            <a href="genre_sales_vis.html">Genre vs Sales</a>
+            <a href="genre_publisher_vis.html">Genre vs Publisher</a>
+            <a href="conclusionpage.html">Conclusion</a>
+        </nav>
     </header>
 
     <main>
-    <h1> Analyzing the Relationship Between a Game's Critic Score, User score, and Revenue </h1>
+        <h1> Analyzing the Relationship Between a Game's Critic Score, User score, and Revenue </h1>
 
-        <iframe class="iframelarge" src="scatterplot_with_barchart.html"></iframe>
+        <iframe class="iframelarge" scrolling="no" src="scatterplot_with_barchart.html"></iframe>
         <h4>Critic Score vs User Score Visualization</h4>
         <p>
-            This interactive dashboard combines a scatterplot and bar chart to show how critic scores, user scores, 
-            and revenue relate across games. Each point represents a game, with critic score on the x-axis and user 
-            score on the y-axis to reveal correlations, clusters, and outliers. Color represents ESRB rating, and point 
-            size reflects global sales, highlighting titles with greater commercial impact. 
-            
+            This interactive dashboard combines a scatterplot and bar chart to show how critic scores, user scores,
+            and revenue relate across games. Each point represents a game, with critic score on the x-axis and user
+            score on the y-axis to reveal correlations, clusters, and outliers. Color represents ESRB rating, and point
+            size reflects global sales, highlighting titles with greater commercial impact.
+
         </p>
         <p>
             To support exploration, the visualization provides multiple interactive filters, including genre, rating,
@@ -42,71 +42,82 @@
         </p>
         <h4>Key Takeaways</h4>
         <p>
-            <ol>
-                <li>Games rated E (Everyone) have the highest global sales at $1,979.71M, likely due to broad accessibility. 
-                    They are followed by M (Mature) at $1,437.10M, T (Teen) at $1,396.11M, and E10+ at $553.08M
-                </li>
-                <li>Using the revenue slider to display the top 10 highest-grossing video games reveals that the
-                    Wii Sport franchise holds 4 titles (Wii Sports, Wii Sports Resort, Wii Fit, Wii Fit Plus) partly because 
-                    many were bundled with the console, which boosted accessibility significantly.  
-                </li>
-                <li>There is a moderate positive correlation between critic scores and user scores, indicating that games
-                    well-received by critics also tend to be favored by players.
-                </li>
-                <li>Across all regions, North America generates the highest revenue, followed by Europe, while
-                    Japan consistently ranks the lowest total sales.
-                </li>
-                <li>
-                    Overall, the dashboard shows that global revenue is heavily concentrated in games that score 
-                    well with both critics and users, meaning commercial success tends to align with strong reception 
-                    rather than genre or rating alone
-                </li>
-            </ol>
+        <ol>
+            <li>Games rated E (Everyone) have the highest global sales at $1,979.71M, likely due to broad accessibility.
+                They are followed by M (Mature) at $1,437.10M, T (Teen) at $1,396.11M, and E10+ at $553.08M
+            </li>
+            <li>Using the revenue slider to display the top 10 highest-grossing video games reveals that the
+                Wii Sport franchise holds 4 titles (Wii Sports, Wii Sports Resort, Wii Fit, Wii Fit Plus) partly because
+                many were bundled with the console, which boosted accessibility significantly.
+            </li>
+            <li>There is a moderate positive correlation between critic scores and user scores, indicating that games
+                well-received by critics also tend to be favored by players.
+            </li>
+            <li>Across all regions, North America generates the highest revenue, followed by Europe, while
+                Japan consistently ranks the lowest total sales.
+            </li>
+            <li>
+                Overall, the dashboard shows that global revenue is heavily concentrated in games that score
+                well with both critics and users, meaning commercial success tends to align with strong reception
+                rather than genre or rating alone
+            </li>
+        </ol>
         </p>
 
         <iframe src="boxplot_with_summary.html"></iframe>
-       <h4>Critic Score vs User Score Visualization for Two Genre Comparison</h4>
+        <h4>Critic Score vs User Score Visualization for Two Genre Comparison</h4>
         <p>
-            This visualization compares two selected genres by showing how user scores, critic scores, and review counts 
-            differ between them. The boxplots highlight differences in spread, medians, and outliers for both user and 
-            critic reviews. The accompanying the summary table aggregates key metrics such as average scores, total review 
-            counts, and average global sales. This summary helps address a shortfall in the first visualization by placing
-            review counts and score scales in direct relation to one another. This allows for a more balanced comparison 
+            This visualization compares two selected genres by showing how user scores, critic scores, and review counts
+            differ between them. The boxplots highlight differences in spread, medians, and outliers for both user and
+            critic reviews. The accompanying the summary table aggregates key metrics such as average scores, total
+            review
+            counts, and average global sales. This summary helps address a shortfall in the first visualization by
+            placing
+            review counts and score scales in direct relation to one another. This allows for a more balanced comparison
             of genres that may differ widely in popularity and sample size.
 
         </p>
         <p>
-            To support exploration, the dropdown menu enables users to switch between 2 different genres and directly compare 
-            how their review distributions change across categories. This makes the visualization useful for identifying which 
-            genres have more consistent ratings, which attract greater user or critic engagement, and whether certain genres 
+            To support exploration, the dropdown menu enables users to switch between 2 different genres and directly
+            compare
+            how their review distributions change across categories. This makes the visualization useful for identifying
+            which
+            genres have more consistent ratings, which attract greater user or critic engagement, and whether certain
+            genres
             show a stronger correlation between critic and player sentiment.
         </p>
         </p>
         <h4>Key Takeaways</h4>
         <p>
-            <ol>
-                <li>
-                    Across all genres the average user score is 72.46, the average user count is 100,539, the average critic score is 70.73, 
-                    the average critic count is 16,698, and average global sales rest at $0.721 million, 
-                </li>
-                <li>
-                    Role-playing games have the highest average user rating (76.135), while shooter games have the lowest 
-                    on average (70.76).
-                </li>
-                <li>
-                    Shooter games have the highest critic score on average (74.165), while adventure games have the lowest 
-                    critics score on average (66.177)
-                </li>
-                <li>
-                    Platform and shooter games have very similar average global sales ($0.931 million and $0.934 million respectfully) 
-                    which are the highest in the dataset. The genre with the lowest average global sales are strategy games with $0.262 million
-                </li>
-                <li>
-                    Platform games appear to be the most attractive genre. With an average user rating of 73.8, an average critic score of 70.03, 
-                    an average global sales of $0.931 million, and high engagement with both critics in users, platform games perform well across all metrics.
+        <ol>
+            <li>
+                Across all genres the average user score is 72.46, the average user count is 100,539, the average critic
+                score is 70.73,
+                the average critic count is 16,698, and average global sales rest at $0.721 million,
+            </li>
+            <li>
+                Role-playing games have the highest average user rating (76.135), while shooter games have the lowest
+                on average (70.76).
+            </li>
+            <li>
+                Shooter games have the highest critic score on average (74.165), while adventure games have the lowest
+                critics score on average (66.177)
+            </li>
+            <li>
+                Platform and shooter games have very similar average global sales ($0.931 million and $0.934 million
+                respectfully)
+                which are the highest in the dataset. The genre with the lowest average global sales are strategy games
+                with $0.262 million
+            </li>
+            <li>
+                Platform games appear to be the most attractive genre. With an average user rating of 73.8, an average
+                critic score of 70.03,
+                an average global sales of $0.931 million, and high engagement with both critics in users, platform
+                games perform well across all metrics.
 
-                </li>
-            </ol>
+            </li>
+        </ol>
         </p>
 </body>
+
 </html>
