@@ -21,29 +21,69 @@
     </header>
 
     <main>
-        <h1> Our Analysis </h1>
+        <h1> Analyzing Trends in Sales and Their Tie To Video Game Genre </h1>
         <iframe class="iframelarge" scrolling="no" src="linechart.html"></iframe>
         <p>
-            This visualization in a line chart for the year and the total global sales in millions of dollars for that
-            year. Each line on the line chard represents a genre of a video game.
+            The above line chart visualization represents total sales in millions for a given year, where the lines are
+            split by genre. In general, we can see that less popular genres experience less volatility, while genres in
+            higher popularity experience more volatility. Furthermore, the graph altogether has a spike around the year
+            2007, after which it sinks.
         </p>
         <p>
-            From the line chart we can see that over the years, all genres have fallen in popularity while shooter,
-            sports, and action games have risen on-net. The only exception is the sudden plunder in 2016, but this can
-            be explained by the fact that the data was scraped from a blog, so perhaps the blog website became less
-            popular and outdated.
+            The visualization has interactivity, where lines can be singled out by pressing on them. Furthermore, the
+            user can brush and select certain years to consider, which shows a bar plot of genres and their total sales
+            in millions over those selected years, which declusters the lines.
+        </p>
+        </p>
+        <h4>Key Takeaways</h4>
+        <p>
+        <ol>
+            <li>
+                From the line chart we can see that over the years, all genres have fallen in popularity while shooter,
+                sports, and action games have risen on-net.
+            </li>
+            <li>
+                The volatility for more popular genres can be explained by the
+                fact that there is more competition amongst them, and so games that are popular one year for sports
+                replace the popularity for games that may be in the action genre.
+            </li>
+            <li>
+                However, low-popularity games have a low
+                player-base, so their popularity is not affected much by competition.
+            </li>
+            <li>
+                There is a sharp downfall in 2016, not because games have fallen, but probably because the dataset is
+                outdated. More specifically, the dataset was scraped off of an older blog, and so users might have
+                transferred to more modern gaming blog websites, such as Reddit for example.
+            </li>
+        </ol>
         </p>
 
         <iframe class="iframelarge" scrolling="no" src="heatmap.html"></iframe>
         <p>
-            The above visualization is a bubble chart between video game genre and platform, where the bubble size
-            corresponds to global sales in millions of dollars.
+            The above visualization is a heatmap between video game genre and platform, where the heat scale is the
+            amount of total sales in millions for the specific genre and platform combination.
         </p>
         <p>
-            What we can see from the visualization is that different platforms have seen different levels of success
-            across genres, suggesting that perhaps those specific platofrms are godo for the specific genre of game
-            (e.g. Wii for sports games), or the games the platform made were good for the genre. Perhaps a combination
-            of both.
+            While the plot is mainly static, the user can hover over a cell to see the specific sale count.
+        </p>
+        <p>
+        <ol>
+            <li>
+                We can tell that some consoles are geared more towards specific game genres, such as XBox for shooter
+                and action, or even Playstation 3 console.
+            </li>
+            <li>
+                Some consoles are better geared for all-round gameplay, like the Playstation 2 console, which has high
+                sales across multiple genres.
+            </li>
+            <li>
+                Certain consoles do not produce games for certain genres. For example, DreamCast from Sega did not make
+                any action, puzzle, or strategy games. This could also be because the DreamCast is an old console, and
+                those video game genres could have been not popularized then; or, the consoles just were not powerful
+                enough to run genres like "action".
+            </li>
+        </ol>
         </p>
     </main>
 </body>
